@@ -1,28 +1,26 @@
 package task;
 
-public class ServiceStation {
-    public void checkCar(Car car) {
-        if (car != null) {
+public class ServiceStation implements Service {
+    public void check(Car car) {
             System.out.println("Обслуживаем " + car.getModelName());
             for (int i = 0; i < car.getWheelsCount(); i++) {
-                CarService.updateTyre();
+                TransportVehicle.updateTyre();
             }
-            CarService.checkEngine();
-        }
+            TransportVehicle.checkEngine();
     }
-        public void checkTruck(Truck truck){
-            System.out.println("Обслуживаем " + truck.getModelName());
-            for (int i = 0; i < truck.getWheelsCount(); i++) {
-                TruckService.updateTyre();
-            }
-            TruckService.checkEngine();
-            TruckService.checkTrailer();
+    public void check(Truck truck){
+        System.out.println("Обслуживаем " + truck.getModelName());
+        for (int i = 0; i < truck.getWheelsCount(); i++) {
+            TransportVehicle.updateTyre();
         }
+        TransportVehicle.checkEngine();
+        TransportVehicle.checkTrailer();
+    }
 
-        public void checkBicycle(Bicycle bicycle){
-            System.out.println("Обслуживаем " + bicycle.getModelName());
-            for (int i = 0; i < bicycle.getWheelsCount(); i++) {
-                BicycleService.updateTyre();
-            }
+    public void check(Bicycle bicycle){
+        System.out.println("Обслуживаем " + bicycle.getModelName());
+        for (int i = 0; i < bicycle.getWheelsCount(); i++) {
+            TransportVehicle.updateTyre();
         }
     }
+}

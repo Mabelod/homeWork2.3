@@ -1,10 +1,10 @@
 package task;
 
 public interface Service {
-     void checkCar(Car car);
+    void check(Car car);
 
-    void checkBicycle();
+    void check(Truck truck);
 
-    void checkTruck(Car car);
+    void check(Bicycle bicycle);
 
 }

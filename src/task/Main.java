@@ -12,12 +12,13 @@ public class Main {
         Bicycle bicycle2 = new Bicycle("bicycle1",2);
 
         ServiceStation station = new ServiceStation();
-        station.checkCar(car);
-        station.checkCar(car2);
-        station.checkBicycle(bicycle);
-        station.checkBicycle(bicycle2);
-        station.checkTruck(truck);
-        station.checkTruck(truck2);
+        VehicleMaintenance(station, car, truck, bicycle);
+    }
+
+    public static void VehicleMaintenance(Service service, Car car, Truck truck, Bicycle bicycle) {
+        service.check(car);
+        service.check(truck);
+        service.check(bicycle);
 
     }
 }
