@@ -21,6 +21,7 @@ public class ServiceStation implements Service {
         System.out.println("Обслуживаем " + bicycle.getModelName());
         for (int i = 0; i < bicycle.getWheelsCount(); i++) {
             TransportVehicle.updateTyre();
+
         }
     }
 }

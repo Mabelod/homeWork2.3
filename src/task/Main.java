@@ -19,6 +19,5 @@ public class Main {
         service.check(car);
         service.check(truck);
         service.check(bicycle);
-
     }
 }

@@ -27,5 +27,6 @@ public class TransportVehicle {
 
     public static void checkTrailer() {
         System.out.println("Проверяем прицеп");
+
     }
 }

@@ -6,5 +6,4 @@ public interface Service {
     void check(Truck truck);
 
     void check(Bicycle bicycle);
-
 }
